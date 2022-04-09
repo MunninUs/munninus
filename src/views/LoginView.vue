@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Pão com batata</h1>
+    <h3>Pão com batata</h3>
   </div>
 </template>
 
