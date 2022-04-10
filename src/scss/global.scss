@@ -79,6 +79,8 @@ select {
   --background-color: #ffffff;
   --text-color: #3f3d56;
   --default-gradient: linear-gradient(99.26deg, #f152ff -1.17%, #bb23fd 89.96%);
+  --primary-color: #d539fe;
+  --subtext-color: #9d9d9d;
 }
 
 [theme="dark"] {
@@ -165,7 +167,7 @@ button:hover {
   cursor: pointer;
 }
 .welcome .circle.selected {
-  background-color: #d035fe;
+  background-color: var(--primary-color);
   box-shadow: -1px 3px 14px rgba(187, 35, 253, 0.46);
 }
 .welcome footer button {
@@ -174,4 +176,63 @@ button:hover {
 }
 .margin-top-2 {
   margin-top: 2rem;
+}
+.small-text {
+  font-size: 0.7rem;
+}
+.action-text {
+  font-size: 0.8rem;
+  color: var(--primary-color);
+  font-weight: 500;
+}
+.padding-1-2 {
+  padding: 1rem 2rem;
+}
+.subtext-color {
+  color: var(--subtext-color);
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 2.5rem;
+  height: 1.25rem;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider[theme="dark"]{
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ffffff;
+  border-radius: 0.9rem;
+}
+.slider[theme="light"]{
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #352d39;
+  border-radius: 0.9rem;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  left: 0.125rem;
+  bottom: 0.125rem;
+  background-color: var(--primary-color);
+  transition: 0.4s;
+}
+.switch input:checked + .slider:before {
+  transform:translateX(1.25rem);
 }
