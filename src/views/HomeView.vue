@@ -8,8 +8,8 @@
       <WelcomeSlide v-show="currentSlide === 0" :slide="slides[0]" :theme="theme" />
       <WelcomeSlide v-show="currentSlide === 1" :slide="slides[1]" :theme="theme" />
       <div class="flex gap-1 margin-top-2">
-        <div :class="`circle ${currentSlide === 0 ? 'selected' : ''}`"></div>
-        <div :class="`circle ${currentSlide === 1 ? 'selected' : ''}`"></div>
+        <div @click="currentSlide = 0" :class="`circle ${currentSlide === 0 ? 'selected' : ''}`"></div>
+        <div @click="currentSlide = 1" :class="`circle ${currentSlide === 1 ? 'selected' : ''}`"></div>
       </div>
     </main>
     <footer v-show="currentSlide === 0">
