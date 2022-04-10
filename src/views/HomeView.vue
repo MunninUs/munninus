@@ -1,8 +1,11 @@
 <template>
   <div class="welcome">
-    <button @click="changeTheme()">Change theme</button>
-    <header>
+    <header class="flex space-between align-center">
       <img :src="require('../assets/logo-'+theme+'.svg')" />
+      <label class="switch">
+        <input v-model="darkMode" type="checkbox">
+        <span class="slider" :theme="theme"></span>
+      </label>
     </header>
     <main class="align-center flex-column">
       <WelcomeSlide v-show="currentSlide === 0" :slide="slides[0]" :theme="theme" />
@@ -17,6 +20,10 @@
     </footer>
     <footer v-show="currentSlide === 1">
       <button>Get Started</button>
+      <a class="flex padding-1-2 space-between align-center">
+        <span class="small-text subtext-color">Already have an account?</span>
+        <span class="action-text">Login</span>
+      </a>
     </footer>
   </div>
 </template>
