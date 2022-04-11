@@ -8,8 +8,8 @@
       </label>
     </header>
     <main class="align-center flex-column">
-      <WelcomeSlide v-show="currentSlide === 0" :slide="slides[0]" :theme="theme" />
-      <WelcomeSlide v-show="currentSlide === 1" :slide="slides[1]" :theme="theme" />
+      <WelcomeSlide v-show="currentSlide === 0" :slide="slides[0]" />
+      <WelcomeSlide v-show="currentSlide === 1" :slide="slides[1]" />
       <div class="flex gap-1 margin-top-2">
         <div @click="currentSlide = 0" :class="`circle ${currentSlide === 0 ? 'selected' : ''}`"></div>
         <div @click="currentSlide = 1" :class="`circle ${currentSlide === 1 ? 'selected' : ''}`"></div>
@@ -51,7 +51,6 @@ export default {
         },
       ],
       currentSlide:0,
-      theme:document.body.getAttribute('theme') ? document.body.getAttribute('theme') : 'light',
     }
   },
   methods: {
@@ -63,13 +62,18 @@ export default {
     darkMode(newData) {
       if (newData) {
         document.body.setAttribute("theme", "dark");
-        this.theme = 'dark';
+        this.$store.commit('SET_THEME', 'dark');
       } else {
         document.body.setAttribute("theme", "light");
-        this.theme = 'light';
+        this.$store.commit('SET_THEME', 'light');
       } 
     }
   },
+  computed:{
+    theme(){
+      return this.$store.getters['GET_THEME'];
+    }
+  }
 }
 </script>
 <style>

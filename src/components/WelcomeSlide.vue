@@ -10,7 +10,12 @@
 
 <script>
 export default {
-  props: ["slide", "theme"],
+  props: ["slide"],
+  computed:{
+    theme(){
+      return this.$store.getters['GET_THEME']
+    }
+  }
 };
 </script>
 
