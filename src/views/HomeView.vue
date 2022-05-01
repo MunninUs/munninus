@@ -47,6 +47,11 @@ export default {
           image: 'organize',
           text: 'Here you can organize your tasks easily, customizing, and sorting the way the fits you better.'
         },
+        {
+          title: 'Share with friends',
+          image: 'share',
+          text: 'Share with your friends or family tasks and daily schedules, so you both can do it together!'
+        },
       ],
       currentSlide:0,
     }
