@@ -3,5 +3,7 @@
 </template>
 
 <style lang="scss">
-@import url("./scss/global.scss");
+@use "./scss/global.scss";
+
+
 </style>
