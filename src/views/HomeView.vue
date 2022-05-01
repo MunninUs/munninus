@@ -13,10 +13,10 @@
         <div v-for="(data, index) in slides" :key="index" @click="currentSlide = index" :class="`circle ${currentSlide === index ? 'selected' : ''}`"></div>
       </div>
     </main>
-    <footer v-show="currentSlide === 0">
+    <footer v-show="currentSlide < slides.length -1">
       <button @click="currentSlide = 1">Next</button>
     </footer>
-    <footer v-show="currentSlide === 1">
+    <footer v-show="currentSlide === slides.length -1">
       <button>Get Started</button>
       <a class="flex padding-1-2 space-between align-center">
         <span class="small-text subtext-color">Already have an account?</span>
