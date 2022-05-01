@@ -7,7 +7,16 @@
         <span class="slider" :theme="theme"></span>
       </label>
     </header>
-    <main></main>
+    <main>
+      <h1>Hey<span>!</span></h1>
+      <h2>Login to your account</h2>
+      <p>We are happy to have you back</p>
+      <div class="flex-column">
+        <input placeholder="example@gmail.com"> 
+        <input placeholder="Password" type="password">
+      </div>
+      
+    </main>
     <footer></footer>
   </div>
 </template>
