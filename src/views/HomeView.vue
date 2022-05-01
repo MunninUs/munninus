@@ -14,7 +14,7 @@
       </div>
     </main>
     <footer v-show="currentSlide < slides.length -1">
-      <button @click="currentSlide = 1">Next</button>
+      <button @click="currentSlide++">Next</button>
     </footer>
     <footer v-show="currentSlide === slides.length -1">
       <button>Get Started</button>
@@ -35,7 +35,7 @@ export default {
   name: 'HomeView', 
   data(){
     return {
-      darkMode:false,
+      darkMode: this.$store.getters['GET_THEME'] === 'light' ? false : true,
       slides: [
         {
           title: 'Plan your day',
@@ -70,7 +70,7 @@ export default {
         document.body.setAttribute("theme", "light");
         this.$store.commit('SET_THEME', 'light');
       } 
-    }
+    },
   },
   computed:{
     theme(){
