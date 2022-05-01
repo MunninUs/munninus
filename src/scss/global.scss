@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Ruluko&display=swap');
 /* Box sizing rules */
 *,
 *::before,
@@ -247,4 +248,49 @@ button:hover {
 }
 .switch input:checked + .slider:before {
   transform: translateX(1.25rem);
+}
+.login {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+  padding-bottom: 5rem;
+  main {
+    padding: 1.5rem 2.5rem;
+    input {
+      background: rgba(113, 113, 113, 0.07);
+      border-radius: 8px;
+      padding:0.6rem;
+      font-family: 'Ruluko';
+      font-size: 1rem;
+      border: none;
+      outline: none;
+      text-indent: 0.6rem;
+      &::placeholder{
+        color: #867c7cA8;
+      }
+      &::-ms-reveal{
+        display: block;
+      }
+    }
+    span {
+      color: #d539fe;
+      font-size: 1.4rem;
+    }
+  }
+  header {
+    padding: 1.5rem 2rem;
+  }
+  h1 {
+    font-size: 1.3rem;
+  }
+  h2 {
+    font-size: 1.15rem;
+    font-weight: 500;
+  }
+  p {
+    font-size: 0.9rem;
+    color: #3f3d5699;
+    margin-top:0.3rem;
+  }
 }

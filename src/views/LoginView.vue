@@ -10,14 +10,21 @@
     <main>
       <h1>Hey<span>!</span></h1>
       <h2>Login to your account</h2>
-      <p>We are happy to have you back</p>
-      <div class="flex-column">
+      <p>We are happy to have you back!</p>
+      <div class="flex-column gap-2">
         <input placeholder="example@gmail.com"> 
         <input placeholder="Password" type="password">
+        <a>Forgot password?</a>
       </div>
-      
     </main>
-    <footer></footer>
+    <footer>
+      <button>Login</button>
+      <div>
+        Or
+      </div>
+      <div id="google-login">
+      </div>
+    </footer>
   </div>
 </template>
 
