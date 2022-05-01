@@ -8,11 +8,9 @@
       </label>
     </header>
     <main class="align-center flex-column">
-      <WelcomeSlide v-show="currentSlide === 0" :slide="slides[0]" />
-      <WelcomeSlide v-show="currentSlide === 1" :slide="slides[1]" />
+      <WelcomeSlide v-for="(data, index) in slides" v-show="currentSlide === index" :key="index" :slide="slides[index]" />
       <div class="flex gap-1 margin-top-2">
-        <div @click="currentSlide = 0" :class="`circle ${currentSlide === 0 ? 'selected' : ''}`"></div>
-        <div @click="currentSlide = 1" :class="`circle ${currentSlide === 1 ? 'selected' : ''}`"></div>
+        <div v-for="(data, index) in slides" :key="index" @click="currentSlide = index" :class="`circle ${currentSlide === index ? 'selected' : ''}`"></div>
       </div>
     </main>
     <footer v-show="currentSlide === 0">
@@ -48,6 +46,11 @@ export default {
           title: 'Organize your tasks',
           image: 'organize',
           text: 'Here you can organize your tasks easily, customizing, and sorting the way the fits you better.'
+        },
+        {
+          title: 'Share with friends',
+          image: 'share',
+          text: 'Share with your friends or family tasks and daily schedules, so you both can do it together!'
         },
       ],
       currentSlide:0,
