@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ruluko&display=swap");
 /* Box sizing rules */
 *,
 *::before,
@@ -96,6 +97,7 @@ body {
   height: 100vh;
   width: 100vw;
   background-color: var(--background-color);
+  transition: 0.4s;
 }
 
 h1,
@@ -143,43 +145,45 @@ button:hover {
 .gap-2 {
   gap: 2rem;
 }
-.welcome{
+.welcome {
   display: flex;
   flex-direction: column;
-  height:100vh;
+  height: 100vh;
   justify-content: space-between;
   padding-bottom: 5rem;
-}
-.welcome header {
-  padding: 1.5rem 2rem;
-}
-.welcome main {
-  padding: 1.5rem 2.5rem;
-}
-.welcome h1 {
-  font-size: 1.3rem;
-}
-.welcome footer {
-  padding: 0.5rem 2.5rem;
-}
-.welcome main p {
-  text-align: center;
-  font-size: 0.8rem;
-}
-.welcome .circle {
-  width: 0.6rem;
-  height: 0.6rem;
-  border-radius: 50%;
-  background-color: #00000026;
-  cursor: pointer;
-}
-.welcome .circle.selected {
-  background-color: var(--primary-color);
-  box-shadow: -1px 3px 14px rgba(187, 35, 253, 0.46);
-}
-.welcome footer button {
-  width: 100%;
-  padding: 0.5rem;
+
+  footer {
+    padding: 0.5rem 2.5rem;
+    button {
+      width: 100%;
+      padding: 0.5rem;
+    }
+  }
+  h1 {
+    font-size: 1.3rem;
+  }
+  main {
+    padding: 1.5rem 2.5rem;
+    p {
+      text-align: center;
+      font-size: 0.8rem;
+    }
+  }
+  header {
+    padding: 1.5rem 2rem;
+  }
+  .circle {
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 50%;
+    background-color: #00000026;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  .circle.selected {
+    background-color: var(--primary-color);
+    box-shadow: -1px 3px 14px rgba(187, 35, 253, 0.46);
+  }
 }
 .margin-top-2 {
   margin-top: 2rem;
@@ -190,6 +194,7 @@ button:hover {
 .action-text {
   font-size: 0.8rem;
   color: var(--primary-color);
+  transition: 0.4s;
   font-weight: 500;
 }
 .padding-1-2 {
@@ -197,6 +202,7 @@ button:hover {
 }
 .subtext-color {
   color: var(--subtext-color);
+  transition: 0.4s;
 }
 .switch {
   position: relative;
@@ -209,7 +215,7 @@ button:hover {
   width: 0;
   height: 0;
 }
-.slider[theme="dark"]{
+.slider[theme="dark"] {
   cursor: pointer;
   position: absolute;
   top: 0;
@@ -219,7 +225,7 @@ button:hover {
   background-color: #ffffff;
   border-radius: 0.9rem;
 }
-.slider[theme="light"]{
+.slider[theme="light"] {
   cursor: pointer;
   position: absolute;
   top: 0;
@@ -241,5 +247,62 @@ button:hover {
   transition: 0.4s;
 }
 .switch input:checked + .slider:before {
-  transform:translateX(1.25rem);
+  transform: translateX(1.25rem);
+}
+.login {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+  padding-bottom: 5rem;
+  main {
+    padding: 1.5rem 2.5rem;
+    input {
+      background: rgba(113, 113, 113, 0.07);
+      border-radius: 8px;
+      padding: 0.6rem;
+      font-family: "Ruluko";
+      font-size: 1rem;
+      border: none;
+      outline: none;
+      text-indent: 0.6rem;
+      &::placeholder {
+        color: #867c7ca8;
+      }
+      &::-ms-reveal {
+        display: block;
+      }
+    }
+    .input-box {
+      position: relative;
+      input{
+        width: 100%;
+      }
+      span {
+        position: absolute;
+        top: 25%;
+        cursor: pointer;
+        right: 1rem;
+      }
+    }
+    span {
+      color: #d539fe;
+      font-size: 1.4rem;
+    }
+  }
+  header {
+    padding: 1.5rem 2rem;
+  }
+  h1 {
+    font-size: 1.3rem;
+  }
+  h2 {
+    font-size: 1.15rem;
+    font-weight: 500;
+  }
+  p {
+    font-size: 0.9rem;
+    color: #3f3d5699;
+    margin-top: 0.3rem;
+  }
 }
